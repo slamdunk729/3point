@@ -14,10 +14,10 @@ jobs:
           python-version: 3.X
       - name: Install dependencies
         run: |
-         pip3 install molecule[docker] yamllint ansible-lint
+         pip3 install molecule[docker,lint] 
       - name: Test with molecule
         run: |
-          molecule test
+          cd playbook ;molecule test
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
