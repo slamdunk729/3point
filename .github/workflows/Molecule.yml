@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install -r playbook/molecule-requirements.txt
+          python3 -m pip install -r playbook/requirements.txt
       - name: Test with molecule
         run: |
           molecule test
