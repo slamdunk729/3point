@@ -1,0 +1,8 @@
+---
+#-----------------------------------------------------------
+# Enable Service
+#-----------------------------------------------------------
+- name: MathLM enable service
+  systemd: name={{ item }} enabled=yes state=started
+  with_items:
+    - mathlm
